@@ -9,7 +9,7 @@ import AProposPage from './pages/AProposPage.vue'
 import ContactPage from './pages/ContactPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: HomePage },
     { path: '/services', component: ServicesPage },
