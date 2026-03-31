@@ -66,6 +66,19 @@ const avisList = [
   display: flex;
   flex-direction: column;
   gap: 14px;
+  position: relative;
+}
+
+.avis-card::before {
+  content: '“';
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: rgba(196, 154, 122, 0.18);
+  pointer-events: none;
 }
 
 .stars {
@@ -76,10 +89,12 @@ const avisList = [
 .avis-text {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   color: var(--brun-moyen);
-  line-height: 1.6;
+  line-height: 1.65;
   flex: 1;
+  padding-right: 1.5rem;
+  text-wrap: pretty;
 }
 
 .avis-auteur {

@@ -17,9 +17,18 @@
 }
 
 .gold-divider-line {
-  width: 80px;
+  width: 72px;
   height: 1px;
-  background-color: var(--or-rose);
   flex-shrink: 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--or-rose) 20%,
+    var(--champagne-fonce) 50%,
+    var(--or-rose) 80%,
+    transparent
+  );
+  opacity: 0.9;
 }
 </style>

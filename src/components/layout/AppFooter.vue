@@ -60,11 +60,23 @@
 
 <style scoped>
 .footer {
-  background-color: var(--brun-elegant);
+  position: relative;
+  background: linear-gradient(180deg, #523d2f 0%, var(--brun-elegant) 28%, var(--brun-elegant) 100%);
   color: rgba(253, 250, 247, 0.7);
   padding: 60px 24px 24px;
   /* Extra bottom padding on mobile for sticky call bar */
   padding-bottom: 80px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--or-rose), var(--rose-nude), var(--or-rose), transparent);
+  opacity: 0.65;
 }
 
 @media (min-width: 768px) {
@@ -74,6 +86,8 @@
 }
 
 .footer-inner {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
 }

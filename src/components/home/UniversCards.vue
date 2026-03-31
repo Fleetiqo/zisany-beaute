@@ -83,11 +83,13 @@ const cards = [
 .card-icon {
   width: 56px;
   height: 56px;
-  background: var(--rose-pale);
-  border-radius: 12px;
+  background: linear-gradient(145deg, var(--rose-pale), rgba(253, 250, 247, 0.95));
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(237, 213, 188, 0.6);
+  box-shadow: 0 2px 10px rgba(74, 55, 40, 0.05);
 }
 
 .card-title {

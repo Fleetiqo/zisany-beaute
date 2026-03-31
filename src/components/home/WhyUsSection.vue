@@ -81,17 +81,32 @@ const points = [
   display: flex;
   gap: 20px;
   align-items: flex-start;
+  padding: 22px 22px 22px 20px;
+  background: rgba(253, 250, 247, 0.45);
+  border-radius: 14px;
+  border: 1px solid rgba(237, 213, 188, 0.45);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whyus-item:hover {
+  background: rgba(253, 250, 247, 0.85);
+  border-color: rgba(196, 154, 122, 0.35);
+  box-shadow: 0 6px 28px rgba(74, 55, 40, 0.06);
 }
 
 .whyus-icon {
   width: 48px;
   height: 48px;
-  background: var(--rose-pale);
-  border-radius: 10px;
+  background: linear-gradient(145deg, var(--rose-pale), var(--blanc-casse));
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(74, 55, 40, 0.05);
 }
 
 .whyus-title {

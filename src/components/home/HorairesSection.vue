@@ -53,11 +53,14 @@ import HorairesTable from '../shared/HorairesTable.vue'
 }
 
 .horaires-cta-block {
-  background: linear-gradient(135deg, var(--rose-pale), var(--champagne));
-  border-radius: 16px;
+  background: linear-gradient(155deg, var(--rose-pale) 0%, var(--champagne) 55%, var(--blanc-casse) 100%);
+  border-radius: 18px;
   padding: 40px;
   text-align: center;
-  border: 1px solid var(--champagne-fonce);
+  border: 1px solid rgba(237, 213, 188, 0.9);
+  box-shadow:
+    0 8px 32px rgba(74, 55, 40, 0.07),
+    0 1px 0 rgba(255, 255, 255, 0.85) inset;
 }
 
 .horaires-cta-text {

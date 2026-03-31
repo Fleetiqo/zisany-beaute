@@ -20,7 +20,7 @@ defineProps({
 
 <style scoped>
 .section-title-wrap {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .section-title-wrap.center {
@@ -31,16 +31,26 @@ defineProps({
   margin: 0 auto 16px;
 }
 
+.section-title-wrap.left {
+  text-align: left;
+}
+
+.section-title-wrap.left .gold-divider {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .section-title {
   font-size: clamp(2rem, 4vw, 2.8rem);
   margin-bottom: 0;
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.02rem;
   color: var(--taupe);
-  max-width: 560px;
-  line-height: 1.8;
+  max-width: 38rem;
+  line-height: 1.75;
+  text-wrap: pretty;
 }
 
 .center .section-subtitle {

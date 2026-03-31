@@ -64,8 +64,19 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--blanc-casse);
-  transition: box-shadow 0.3s ease;
+  background: rgba(253, 250, 247, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition:
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.navbar.navbar-scrolled {
+  background: rgba(253, 250, 247, 0.94);
+  border-bottom-color: rgba(237, 213, 188, 0.55);
 }
 
 .navbar-inner {
@@ -117,6 +128,12 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 .nav-link:hover,
 .nav-link.router-link-active {
   color: var(--brun-elegant);
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--or-rose);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .navbar-cta {

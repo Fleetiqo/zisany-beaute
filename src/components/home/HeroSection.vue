@@ -29,7 +29,7 @@
       <div class="hero-image-wrap fade-up" ref="heroImage" style="transition-delay: 0.15s;">
         <div class="hero-image-frame">
           <img
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200"
+            src="https://www.institut351.com/components/com_gdwgestion/download.php?fileid=1087"
             alt="Ambiance chaleureuse du salon Zisany Beauté"
             class="hero-image"
             loading="eager"
@@ -63,8 +63,21 @@ onMounted(() => {
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, var(--rose-pale) 0%, var(--champagne) 60%);
+  position: relative;
+  background:
+    radial-gradient(ellipse 85% 70% at 15% 20%, rgba(255, 255, 255, 0.55), transparent 50%),
+    linear-gradient(145deg, var(--rose-pale) 0%, var(--champagne) 45%, var(--champagne-fonce) 100%);
   padding: 80px 24px 80px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -40% 55% auto -15%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(196, 154, 122, 0.09) 0%, transparent 68%);
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
@@ -74,6 +87,8 @@ onMounted(() => {
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: 56px;
@@ -82,7 +97,13 @@ onMounted(() => {
 
 @media (min-width: 900px) {
   .hero-inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr minmax(240px, 0.68fr);
+  }
+
+  .hero-image-wrap {
+    max-width: min(100%, 380px);
+    justify-self: end;
+    width: 100%;
   }
 }
 
@@ -121,9 +142,11 @@ onMounted(() => {
 }
 
 .hero-image-frame {
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(74, 55, 40, 0.15);
+  box-shadow:
+    0 24px 56px rgba(74, 55, 40, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.65) inset;
   aspect-ratio: 4/5;
 }
 

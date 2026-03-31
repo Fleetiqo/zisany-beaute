@@ -1,6 +1,6 @@
 <template>
   <AppNavbar />
-  <main>
+  <main class="site-main">
     <RouterView />
   </main>
   <AppFooter />
